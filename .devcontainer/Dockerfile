@@ -41,9 +41,9 @@ RUN echo "alias tlc='java -cp /opt/tools/tla2tools.jar:/opt/tools/tla2tools.jar 
 RUN wget -qN https://github.com/tlaplus/CommunityModules/releases/latest/download/CommunityModules-deps.jar -P tools/
 
 ## Install TLAPS (proof system)
-RUN wget -N https://github.com/tlaplus/tlapm/releases/download/v1.4.5/tlaps-1.4.5-x86_64-linux-gnu-inst.bin -P /tmp
-RUN chmod +x /tmp/tlaps-1.4.5-x86_64-linux-gnu-inst.bin
-RUN /tmp/tlaps-1.4.5-x86_64-linux-gnu-inst.bin -d tools/tlaps
+RUN wget -N https://github.com/tlaplus/tlapm/releases/download/202210041448/tlaps-1.5.0-x86_64-linux-gnu-inst.bin -P /tmp
+RUN chmod +x /tmp/tlaps-1.5.0-x86_64-linux-gnu-inst.bin
+RUN /tmp/tlaps-1.5.0-x86_64-linux-gnu-inst.bin -d tools/tlaps
 RUN echo 'export PATH=$PATH:/opt/tools/tlaps/bin:/opt/tools/tlaps/bin' >> $HOME/.bashrc
 
 # Java (at least for TLA+)
